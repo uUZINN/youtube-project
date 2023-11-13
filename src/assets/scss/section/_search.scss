@@ -1,0 +1,28 @@
+#searchPage {
+    h2 {
+        margin-bottom: 1rem;
+
+        em {
+            font-weight: 700;
+        }
+    }
+}
+
+.search__inner {
+    width: 100%;
+    padding: 19px 40px;
+    border-bottom: 1px solid var(--white300);
+
+    label {
+        display: none;
+    }
+
+    .search__input {
+        width: 100%;
+        background-color: var(--white100);
+        border: 1px solid var(--white300);
+        color: var(--black600);
+        padding: 15px 30px;
+        border-radius: 50px;
+    }
+}

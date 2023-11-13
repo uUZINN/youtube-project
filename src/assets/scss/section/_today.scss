@@ -1,0 +1,19 @@
+#today {}
+
+.today__inner {
+    display: flex;
+    background-color: #bcbcbc;
+
+    .today__thumb {
+        width: 40%;
+        background-image: url(https://i.ytimg.com/vi/2OZuXph6z20/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDc2_RC5RrpQJqMACn1dKmnWY5_jw);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .today__text {
+        width: 60%;
+        height: 310px;
+    }
+}
