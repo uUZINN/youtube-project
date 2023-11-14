@@ -15,14 +15,14 @@ export const menuText = [
         src: "/",
     },
     {
-        title: "데일리 룩북",
+        title: "오늘의 추천 pick!",
         icon: <BiLogoDailymotion />,
         src: "/today",
     },
     {
-        title: "패션 유튜버 추천",
+        title: "패션 유튜버 모음",
         icon: <PiYoutubeLogoBold />,
-        src: "/youtuber",
+        src: "/fashion",
     }
 ]
 
