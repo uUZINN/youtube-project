@@ -1,10 +1,32 @@
 #searchPage {
     h2 {
         margin-bottom: 1rem;
+        font-weight: 500;
 
         em {
-            font-weight: 700;
+            font-weight: 800;
         }
+    }
+
+    .video__more {
+        text-align: center;
+
+        button {
+            background: var(--black200);
+            border: 1px solid var(--black200);
+            padding: 14px 40px;
+            border-radius: 50px;
+            color: var(--white);
+            transition: all 0.3s;
+
+            &:hover {
+                background: none;
+                color: var(--black200);
+            }
+        }
+
+
+
     }
 }
 

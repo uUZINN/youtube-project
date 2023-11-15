@@ -7,6 +7,7 @@ import Header from './components/section/Header'
 import Main from './components/section/Main'
 import Footer from './components/section/Footer'
 import Channel from './pages/Channel'
+import Search from './pages/Search'
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/today" element={<Today />} />
           <Route path="/fashion" element={<Fashion />} />
           <Route path="/channel/:channelId" element={<Channel />} />
+          <Route path="/search/:searchId" element={<Search />} />
         </Routes>
       </Main>
       <Footer />

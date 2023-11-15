@@ -17,8 +17,8 @@ const Fashion = () => {
 
             <div className='fashion__inner'>
                 <Swiper
-                    slidesPerView={8}
-                    spaceBetween={30}
+                    slidesPerView={9}
+                    spaceBetween={20}
                     autoplay={{
                         delay: 2500,
                         disableOnInteraction: false,
@@ -27,6 +27,27 @@ const Fashion = () => {
                     navigation={true}
                     modules={[Autoplay, Navigation]}
                     className="mySwiper"
+                    breakpoints={{
+                        100: {
+                            slidesPerView: 2
+                        },
+                        400: {
+                            slidesPerView: 3
+                        },
+                        600: {
+                            slidesPerView: 4
+                        },
+                        960: {
+                            slidesPerView: 5
+                        },
+                        1200: {
+                            slidesPerView: 6
+                        },
+                        1600: {
+                            slidesPerView: 9
+                        }
+
+                    }}
                 >
                     {fashionText.map((fashion, key) => (
 

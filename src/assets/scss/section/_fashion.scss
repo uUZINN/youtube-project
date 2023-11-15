@@ -8,14 +8,11 @@ h2 {
     display: flex;
     flex-wrap: wrap;
 
+
     .fashion {
-        margin-right: 20px;
-        margin-bottom: 25px;
-        width: 150px;
+        margin: 0;
 
         .fashion__img {
-            width: 150px;
-            height: 150px;
             border-radius: 50%;
             overflow: hidden;
         }
@@ -23,6 +20,54 @@ h2 {
         .fashion__info {
             text-align: center;
             margin-top: 10px;
+        }
+    }
+}
+
+#youtuber {
+    .fashion__inner {
+
+        .fashion {
+            margin-right: 20px;
+            margin-bottom: 25px;
+            width: 150px;
+
+            .fashion__img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        .fashion__inner {
+            justify-content: space-between;
+
+            .fashion {
+                width: 23%;
+                margin-right: 0;
+
+                .fashion__img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .fashion__inner {
+            .fashion {
+                width: 31%;
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+        .fashion__inner {
+            .fashion {
+                width: 48%;
+            }
         }
     }
 }
