@@ -33,8 +33,8 @@ export const keywordText = [
         icon: <TbHanger />
     },
     {
-        title: "표은지",
-        src: "/search/표은지",
+        title: "엘피디LPD",
+        src: "/search/엘피디LPD",
         icon: <TbHanger />
     },
     {
@@ -43,8 +43,8 @@ export const keywordText = [
         icon: <TbHanger />
     },
     {
-        title: "VROK 브이록",
-        src: "/search/VROK 브이록",
+        title: "도영도영이",
+        src: "/search/도영도영이",
         icon: <TbHanger />
     },
     {
@@ -58,18 +58,18 @@ export const keywordText = [
         icon: <TbHanger />
     },
     {
-        title: "꽃빵 TV",
-        src: "/search/꽃빵 TV",
+        title: "옆집언니 최실장",
+        src: "/search/옆집언니 최실장",
         icon: <TbHanger />
     },
     {
-        title: "러블리 장미 룩북",
-        src: "/search/러블리 장미 룩북",
+        title: "VOGUE KOREA",
+        src: "/search/VOGUE KOREA",
         icon: <TbHanger />
     },
     {
-        title: "소신사장",
-        src: "/search/소신사장",
+        title: "CHAESO 채소",
+        src: "/search/CHAESO 채소",
         icon: <TbHanger />
     },
     {

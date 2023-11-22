@@ -54,6 +54,10 @@
     }
 }
 
+.m__logo.header__logo {
+    display: none;
+}
+
 .header__menu {
     padding: 10px;
 
@@ -162,6 +166,29 @@
                     width: 20px;
                     height: 20px;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .header__logo {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: var(--black100);
+        display: inline-block;
+
+        a {
+            border: none;
+            padding: 8px;
+
+            span {
+                display: none;
+            }
+
+            em {
+                margin-right: 0;
             }
         }
     }

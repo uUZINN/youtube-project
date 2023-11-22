@@ -4,12 +4,15 @@ import { PiCoatHangerBold } from "react-icons/pi"
 
 const Logo = () => {
     return (
-        <h1 className="header__logo">
-            <Link to="/">
-                <em><PiCoatHangerBold /></em>
-                <span>fashion<br /> youtube</span>
-            </Link>
-        </h1>
+        <>
+            <h1 className="header__logo">
+                <Link to="/">
+                    <em><PiCoatHangerBold /></em>
+                    <span>fashion<br /> youtube</span>
+                </Link>
+            </h1>
+        </>
+
     )
 }
 

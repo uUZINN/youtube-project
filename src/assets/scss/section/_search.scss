@@ -30,10 +30,20 @@
     }
 }
 
+#search {
+    display: flex;
+    align-items: center;
+}
+
 .search__inner {
     width: 100%;
     padding: 19px 40px;
     border-bottom: 1px solid var(--white300);
+
+    @media (max-width: 800px) {
+        padding: 19px 20px 19px 90px;
+        background: #000;
+    }
 
     label {
         display: none;
@@ -46,5 +56,13 @@
         color: var(--black600);
         padding: 15px 30px;
         border-radius: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    #searchPage {
+        h2 {
+            font-size: 1.5rem;
+        }
     }
 }

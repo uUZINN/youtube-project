@@ -1,0 +1,210 @@
+#channelPage {
+    padding: 0;
+
+    .channel__inner {
+
+        .channel__header {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            background-position: center;
+
+            .circle {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                overflow: hidden;
+                position: absolute;
+                top: 150px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 100;
+            }
+        }
+
+        .channel__info {
+            margin-top: 4.5rem;
+            text-align: center;
+
+            .title {
+                font-weight: 600;
+                font-size: 22px;
+            }
+
+            .desc {
+                margin: 5px 0 0;
+                white-space: pre-line;
+            }
+
+            .info {
+                margin: 1.5rem 0;
+
+                span {
+                    font-size: 15px;
+                    display: inline-flex;
+                    align-items: center;
+                    border: 1px solid var(--black300);
+                    border-radius: 50px;
+                    padding: 8px 20px;
+                    margin: 0 5px;
+                    background-color: var(--black300);
+                    color: var(--white);
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .channel__video {
+            padding: 3rem 3rem 0;
+
+            .video__info {
+                .video__tit {
+                    .desc {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .info {
+                    display: none;
+                }
+            }
+        }
+
+        .channel__more {
+            text-align: center;
+            padding-bottom: 2rem;
+
+            button {
+                background: var(--black200);
+                border: 1px solid var(--black200);
+                padding: 14px 40px;
+                border-radius: 50px;
+                color: var(--white);
+                transition: all 0.3s;
+
+                &:hover {
+                    background: none;
+                    color: var(--black200);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1354px) {
+    .channel__video.video__inner {
+        .video {
+            .video__info {
+                padding: 15px;
+
+                .video__tit {
+                    .title {
+                        font-size: 15px;
+                        min-height: 45px;
+                    }
+
+                    .desc {
+                        min-height: 59px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #channelPage {
+        .channel__inner {
+            .channel__video.video__inner {
+                padding: 1.5rem;
+                grid-template-columns: repeat(3, 32%);
+
+                .video {
+                    .video__info {
+
+                        .video__tit {
+
+                            .desc {
+                                min-height: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+    #channelPage {
+        .channel__inner {
+            .channel__info {
+                .info {
+                    span:last-child {
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .channel__video.video__inner {
+                padding: 1.5rem;
+                grid-template-columns: repeat(2, 48%);
+                margin-top: 2rem;
+
+                .video {
+                    .video__info {
+
+                        .video__tit {
+
+                            .desc {
+                                min-height: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 400px) {
+    #channelPage {
+        .channel__inner {
+            .channel__info {
+                .info {
+                    span:last-child {
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .channel__video.video__inner {
+                padding: 1.5rem;
+                grid-template-columns: repeat(1, 100%);
+                margin-top: 2rem;
+
+                .video {
+                    margin-bottom: 20px;
+
+                    .video__info {
+
+                        .video__tit {
+
+                            .desc {
+                                min-height: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
