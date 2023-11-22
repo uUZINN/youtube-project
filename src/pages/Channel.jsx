@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { fetchFromAPI } from '../utils/api';
+
+import VideoSearch from '../components/video/VideoSearch';
+import Main from '../components/section/Main';
+
 import { BsPersonPlusFill } from "react-icons/bs";
 import { PiVideoFill } from "react-icons/pi";
 import { AiOutlineEye } from "react-icons/ai";
-import VideoSearch from '../components/video/VideoSearch';
-import Main from '../components/section/Main';
 
 const Channel = () => {
     const { channelId } = useParams();

@@ -54,9 +54,6 @@
     }
 }
 
-.m__logo.header__logo {
-    display: none;
-}
 
 .header__menu {
     padding: 10px;
@@ -172,16 +169,38 @@
 }
 
 @media (max-width: 800px) {
+    .show {
+        .header__logo {
+            position: static;
+
+            a {
+                padding: 8px;
+                border: 1px solid transparent;
+                position: static;
+
+                span {
+                    display: block;
+                }
+
+                em {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
     .header__logo {
-        position: fixed;
-        left: 0;
-        top: 0;
         background-color: var(--black100);
         display: inline-block;
+        z-index: 1;
 
         a {
             border: none;
             padding: 8px;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 999;
 
             span {
                 display: none;

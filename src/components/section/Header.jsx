@@ -4,16 +4,14 @@ import Menu from '../header/Menu'
 import Sns from '../header/Sns'
 
 const Header = () => {
-    const [isMenuActive, setIsMenuActive] = useState(false);
+    const [headerClass, setHeaderClass] = useState('');
 
-    const toggleMenu = () => {
-        setIsMenuActive(!isMenuActive);
-    }
-
-    const headerClass = isMenuActive ? 'show' : 'hide';
+    const toggleHeaderClass = () => {
+        setHeaderClass(headerClass === 'show' ? '' : 'show');
+    };
     return (
-        <header id='header' className={headerClass} role='banner'>
-            <Logo onClick={toggleMenu} />
+        <header id='header' role='banner' className={headerClass}>
+            <Logo toggleHeaderClass={toggleHeaderClass} />
             <Menu />
             <Sns />
         </header>

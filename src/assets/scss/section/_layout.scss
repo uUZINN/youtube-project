@@ -7,7 +7,16 @@
     z-index: 1000;
     background-color: var(--black100);
 
+    @media(max-width: 800px) {
+        position: absolute;
+    }
 
+}
+
+@media(max-width: 800px) {
+    #header.show {
+        position: fixed;
+    }
 }
 
 #main {

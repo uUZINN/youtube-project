@@ -148,6 +148,54 @@
     }
 }
 
+.video__slider {
+    .swiper-slide {
+        .video {
+
+            .video__thumb {
+                a {
+                    width: 100%;
+                    display: block;
+                    position: relative;
+                    height: 166px;
+                    background-position: center;
+                    background-size: 100%;
+                }
+            }
+
+            .video__info {
+                margin-top: 10px;
+
+                .title {
+                    a {
+                        font-size: 17px;
+                        font-weight: 600;
+                        line-height: 1.5;
+                        width: 98%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+
+                .info {
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
 @media (max-width: 1354px) {
     .video__inner {
         grid-template-columns: repeat(3, 32%);
