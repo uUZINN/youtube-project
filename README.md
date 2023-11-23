@@ -1,9 +1,14 @@
 #  나만의 패션 유튜브 사이트 만들기
+<<<<<<< HEAD
 유튜브 API를 이용해서 패션룩북 사이트를 만들겠습니다.
 평소에 즐겨보는 패션관련 유튜브 영상
 
 [image](https://uuzinn.github.io/youtube-project/src/assets/img/dddd-min.png)
 
+=======
+유튜브 API를 이용하여 평소에 즐겨보는 패션관련 유튜브 영상들을 모아볼 수 있는 사이트를 제작하였습니다.
+[!image](https://uuzinn.github.io/youtube-project/src/assets/img/dddd-min.png)
+>>>>>>> ec815cb9504657ab8246b55a88e0a5fe3f1709d7
 ## 설치
 sass를 설치<br>
 react-router-dom 설치<br>
