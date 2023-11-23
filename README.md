@@ -1,8 +1,8 @@
 #  나만의 패션 유튜브 사이트 만들기
 유튜브 API를 이용해서 패션룩북 사이트를 만들겠습니다.
 평소에 즐겨보는 패션관련 유튜브 영상
-<img src="https://uuzinn.github.io/youtube-project/src/assets/img/dddd-min.png">
 
+[image](https://uuzinn.github.io/youtube-project/src/assets/img/dddd-min.png)
 
 ## 설치
 sass를 설치<br>
