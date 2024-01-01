@@ -116,7 +116,32 @@ const VideoSearch = ({ videos, layout = '' }) => {
    - 
 이 컴포넌트는 React와 React Router를 활용하여 동적으로 비디오 정보를 표시하고, 링크를 통해 개별 비디오 페이지로 이동할 수 있는 기능을 제공합니다.
 
+```
+useEffect(() => {
+        const fetchResult = async () => {
+            try {
+                const data = await fetchFromAPI(`channels?part=snippet&id=${channelId}`);
+                setChannelDetail(data.items[0])
 
+                const videoData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet&order=date`)
+                setChannelVideo(videoData.items);
+                setNextPageToken(videoData.nextPageToken);
+            } catch (error) {
+                console.log("Error -> ", error);
+            } finally {
+                setLoading(false);
+            }
+        }
+        fetchResult();
+    }, [channelId])
 
-
+    const loadMoreVideos = async () => {
+        if (nextPageToken) {
+            const videosData = await fetchFromAPI(`search?channelId=${channelId}&part=snippet%2Cid&order=date&pageToken=${nextPageToken}`);
+            setChannelVideo(prevVideos => [...prevVideos, ...videosData.items]);
+            setNextPageToken(videosData?.nextPageToken);
+        }
+    }
+```
+React의 useEffect를 활용해 channelId 값이 변경될 때마다 API로부터 해당 채널 정보와 비디오 목록을 가져오는 역할을 합니다. fetchResult 함수는 페이지가 로드되거나 channelId가 변경될 때 실행되며, loadMoreVideos 함수는 더 많은 비디오를 가져오는 데 사용됩니다. 가져온 데이터는 상태에 반영되어 화면에 표시됩니다.
 
