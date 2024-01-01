@@ -59,3 +59,64 @@ RapidAPI는 사용자들에게 API를 쉽게 사용할 수 있는 다양한 기�
 .env 파일은 보통 프로젝트 루트 디렉토리에 위치하며, 환경 변수들은 KEY=VALUE 형식으로 저장됩니다. 이 파일은 보안을 위해 .gitignore와 같은 방법으로 깃(Git) 등 버전 관리 시스템에서 제외시켜야 합니다. 이렇게 하면 중요한 정보가 버전 관리 시스템에 올라가거나 공개되는 것을 방지할 수 있습니다.
 <br><br>
 보통 JavaScript나 Node.js 프로젝트에서는 dotenv 라이브러리를 사용하여 .env 파일에서 환경 변수를 로드하고, 프로젝트에서 사용합니다. 이를 통해 .env 파일에 정의된 환경 변수들을 손쉽게 사용할 수 있습니다.
+
+### CODE VIEW
+```
+import React from 'react'
+import { Link } from 'react-router-dom';
+const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
+const VideoSearch = ({ videos, layout = '' }) => {
+    return (
+        <>
+            {
+                videos.map((video, key) => (
+                    <div className={`video ${layout}`} key={key}>
+                        <div className="video__thumb play__icon">
+                            <Link
+                                to={`/video/${video.id.videoId}`}
+                                style={{ backgroundImage: `url(${video.snippet.thumbnails.high.url})` }}
+                            >
+                            </Link>
+                        </div>
+                        <div className="video__info">
+                            <div className="video__tit">
+                                <h3 className="title">
+                                    <Link to={`/video/${video.id.videoId}`}>{video.snippet.title}</Link>
+                                </h3>
+                                <div className="desc">
+                                    {video.snippet.description}
+                                </div>
+                            </div>
+                            <div className="info">
+                                <Link to={`/channel/${video.snippet.channelId}`} className='author'><span className='author'>{video.snippet.channelTitle}</span></Link>
+                                <span className='date'>{formatDate(video.snippet.publishedAt)}</span>
+                            </div>
+                        </div>
+                    </div >
+                ))
+            }
+        </>
+
+    )
+}
+```
+1. formatDate 함수: 주어진 날짜 문자열을 받아서 해당 날짜의 형식을 조정하여 반환합니다. 이 경우에는 'YYYY-MM-DD' 형태로 반환합니다.
+
+2. VideoSearch 컴포넌트:
+   - videos: 비디오 목록을 받아와서 각 비디오 정보를 렌더링합니다.
+   - layout: 선택적으로 레이아웃을 변경할 수 있는 옵션을 가지고 있습니다.
+   - videos.map(): 비디오 배열을 순회하면서 각 비디오 정보를 동적으로 생성합니다.
+   - 각 비디오 정보는 썸네일 이미지, 제목, 설명, 채널 정보, 게시일 등을 표시하고 있습니다.
+   - 
+이 컴포넌트는 React와 React Router를 활용하여 동적으로 비디오 정보를 표시하고, 링크를 통해 개별 비디오 페이지로 이동할 수 있는 기능을 제공합니다.
+
+
+
+
+
